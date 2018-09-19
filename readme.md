@@ -5,6 +5,8 @@
 1. [Getting started](#getting-started)
 2. [Stack](#stack)
 
+---
+
 ## Getting started
 
 Install [Docker](https://www.docker.com/get-started)
@@ -18,6 +20,8 @@ docker-compose up -d
 ```
 
 You're good to go!
+
+---
 
 ## Stack
 
