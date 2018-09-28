@@ -205,8 +205,6 @@ services:
     networks:
       - frontend
       - backend
-    extra_hosts:
-      - personointi.localtest.ovh
 
   # ### Blackfire ########################################
   #     blackfire:
