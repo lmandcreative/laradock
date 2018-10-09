@@ -8,10 +8,10 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 
 RUN apk add --update \
-    python \
-    python-dev \
-    py-pip \
-    build-base
+  python \
+  python-dev \
+  py-pip \
+  build-base
 
 RUN npm install
 
