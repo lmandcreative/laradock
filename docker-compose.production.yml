@@ -202,14 +202,17 @@ services:
       - ./certbot/letsencrypt/:/var/www/letsencrypt
     depends_on:
       - php-fpm
+    ports:
+      - "80:80"
+      - "443:443"
     networks:
       - frontend
       - backend
-      - traefik
     labels:
       - traefik.basic.frontend.rule=Host:personointi.toyota.letm.com
       - "traefik.docker.network=web"
       - "traefik.frontend.entryPoints=http,https"
+      - traefik.docker.network:web
 
   ### Redis ################################################
   redis:
