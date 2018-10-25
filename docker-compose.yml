@@ -5,6 +5,8 @@ networks:
     driver: ${NETWORKS_DRIVER}
   backend:
     driver: ${NETWORKS_DRIVER}
+  web:
+    driver: overlay
 
 volumes:
   mysql:
@@ -205,6 +207,9 @@ services:
     networks:
       - frontend
       - backend
+      - web
+    labels:
+      - traefik.basic.frontend.rule=Host:personointi.toyota.letm.com
 
   # ### Blackfire ########################################
   #     blackfire:
