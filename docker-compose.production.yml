@@ -5,8 +5,9 @@ networks:
     driver: ${NETWORKS_DRIVER}
   backend:
     driver: ${NETWORKS_DRIVER}
-  web:
-    driver: ${NETWORKS_DRIVER}
+  traefik:
+    external:
+      name: web
 
 volumes:
   mysql:
@@ -204,7 +205,7 @@ services:
     networks:
       - frontend
       - backend
-      - web
+      - traefik
     labels:
       - traefik.basic.frontend.rule=Host:personointi.toyota.letm.com
       - "traefik.docker.network=web"
