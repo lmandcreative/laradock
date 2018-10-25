@@ -207,6 +207,7 @@ services:
       - web
     labels:
       - traefik.basic.frontend.rule=Host:personointi.toyota.letm.com
+      - "traefik.docker.network=web"
       - "traefik.frontend.entryPoints=http,https"
 
   ### Redis ################################################
