@@ -205,11 +205,11 @@ services:
     networks:
       - frontend
       - backend
+      - traefik
     labels:
       - traefik.basic.frontend.rule=Host:personointi.toyota.letm.com
       - "traefik.docker.network=web"
       - "traefik.frontend.entryPoints=http,https"
-      - traefik.docker.network:web
 
   ### Redis ################################################
   redis:
