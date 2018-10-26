@@ -217,7 +217,7 @@ services:
       - backend
       - traefik
     labels:
-      - traefik.basic.frontend.rule=Host:personointi.toyota.letm.com
+      - traefik.basic.frontend.rule=Host:personointi.toyota.letm.com;PathPrefix:/admin/
       - traefik.docker.network=web
       - traefik.frontend.entryPoints=http,https
       - traefik.frontend.passHostHeader=true
